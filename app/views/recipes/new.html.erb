@@ -3,8 +3,11 @@
   <div class="form">
     <%= simple_form_for @recipe do |f| %>
       <%= f.input :name %>
-      <%= f.input :image_url %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :description %>
+      <%= f.input :ingredients %>
+      <%= f.input :method %>
+<!--       <%#= f.input :image_url %>
+  <%#= f.input :photo, as: :file %> -->
       <%= f.submit class: "btn btn-outline-light" %>
     <% end %>
   </div>
