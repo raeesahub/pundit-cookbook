@@ -1,11 +1,12 @@
-<h1>All Recipes</h1>
+<div class="container">
+  <h1>All Recipes</h1>
 
-<ul>
-  <% @recipes.each do |recipe| %>
-    <li>
-      <%= recipe.name %>
-      <%= recipe.description %>
-    </li>
-  <% end %>
-</ul>
-
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <li>
+        <%= recipe.name %>
+        <%= recipe.description %>
+      </li>
+    <% end %>
+  </ul>
+</div>
