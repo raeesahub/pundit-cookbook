@@ -6,8 +6,9 @@
       <%= f.input :description %>
       <%= f.input :ingredients %>
       <%= f.input :method %>
-<!--       <%#= f.input :image_url %>
-  <%#= f.input :photo, as: :file %> -->
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
+      <!-- <%#= f.input :image_url %> -->
       <%= f.submit class: "btn btn-outline-light" %>
     <% end %>
   </div>
