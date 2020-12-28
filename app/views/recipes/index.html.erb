@@ -1,12 +1,19 @@
 <div class="container">
   <h1>All Recipes</h1>
 
-  <ul>
-    <% @recipes.each do |recipe| %>
-      <li>
-        <%= recipe.name %>
-        <%= recipe.description %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="cards-container">
+    <div class="cards">
+
+      <% @recipes.each do |recipe| %>
+        <% if recipe.photos.attached? %>
+          <%= link_to recipe_path(recipe), class: 'card-text' do  %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path recipe.photos[0].key %>')"><%= recipe.name %>
+            </div>
+          <% end %>
+
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
 </div>
